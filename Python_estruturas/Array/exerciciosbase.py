@@ -69,13 +69,17 @@ print(nums)
 # Exercícios Nível Avançado
 # 9. Nome Maiúsculo + Idade Par (MAP + FILTER)
 # python
-# pessoas = [
-#     {"nome": "ana", "idade": 25},
-#     {"nome": "joão", "idade": 30},
-#     {"nome": "maria", "idade": 28}
-# ]
+pessoas = [
+     {"nome": "ana", "idade": 25},
+     {"nome": "joão", "idade": 30},
+     {"nome": "maria", "idade": 28}
+ ]
 # # Resultado esperado: ['JOÃO', 'MARIA']
+[x["nome"].upper() for x in pessoas if x["idade"] % 2 == 0]
+
 # 10. Média dos Números Pares (FILTER + REDUCE)
 # python
 # nums = [1, 2, 3, 4, 5, 6, 7, 8]
 # # Resultado esperado: 5.0
+pares = [x for x in nums if x % 2 == 0]
+reduce(lambda x, y: x + y, pares, 0) / len(pares)
