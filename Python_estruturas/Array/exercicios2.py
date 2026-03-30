@@ -53,9 +53,17 @@ print(nums)
 # 7. Palavras Começando com 'P' (FILTER)
 # python
 words = ["python", "java", "php", "c++", "pascal"]
-words = list(filter(lambda x:x[:1] == "p", nums))
+words = list(filter(lambda x:x[:1] == "p", words))
 print(words)
 # # Resultado esperado: ['python', 'php', 'pascal']
+
+# ✅ CORREÇÃO
+words = [x for x in words if x.startswith('p')]
+# ['python', 'php', 'pascal']
+
+# OU com filter:
+words = list(filter(lambda x: x.startswith('p'), words))
+
 
 # 8. Soma dos Quadrados (MAP + REDUCE)
 # python
@@ -74,9 +82,17 @@ produtos = [
  {"nome": "teclado", "preco": 150}
 ]
 # # Resultado esperado: ['NOTEBOOK', 'TECLADO']
-
+# fica maiusculo e filtra para preco maior q 100
+[x["nome"].upper() for x in produtos if x["preco"] > 100]
 
 # 10. Média dos Múltiplos de 5 (FILTER + REDUCE)
 # python
-# nums = [2, 5, 8, 10, 15, 20, 25]
+nums = [2, 5, 8, 10, 15, 20, 25]
 # # Resultado esperado: 15.0
+
+nums = list(filter(lambda x: x % 5 == 0, nums))
+print(nums)
+numslen = len(nums)
+nums = reduce(lambda x,y: (x + y) , nums)
+nums = nums / numslen
+print(nums)
