@@ -102,3 +102,6 @@ print(notas2)
 #         if lista[i] == alvo:
 #             return i
 # Big O: O(n log n) - Sort domina (maior termo)
+
+
+    
