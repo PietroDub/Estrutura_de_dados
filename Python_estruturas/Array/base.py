@@ -22,7 +22,6 @@ while i<len(newArr):
     print(newArr[i])
     i+=1
 
-
 # comandos básicos
 arr = []
 arrce = [1, 2, 3, "arroz"]
