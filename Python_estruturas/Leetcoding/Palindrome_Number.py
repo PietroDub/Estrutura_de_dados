@@ -21,3 +21,20 @@ class Solution:
         a = x[:]  # ← MUDE SÓ ISSO!
         x.reverse()
         return x == a
+    
+# modo fácil
+#palindrome string
+
+def check_if_palindrome(s:str) ->bool :
+    left = 0
+    rigth = len(s) - 1
+
+    while s[left] < s[rigth]:
+
+        if s[left] != s[rigth]:
+            return False
+        
+        left = left+1
+        rigth = rigth - 1
+
+    return True
