@@ -11,19 +11,42 @@
 # ela terá q ter percorrida por O(n) oque pode deixar
 # a estrutura um pouco mais lenta
 
-mapa = {}
+# base 
+# ✅ Modelo mental correto (simplificado e poderoso)
+
+# Pensa assim:
+
+mapa[numero] = indice
+
+# Exemplo:
+
+nums = [2, 7, 11, 15]
+
+mapa = {
+    2: 0,
+    7: 1,
+    11: 2,
+    15: 3
+}
+
+# 👉 Agora você consegue:
+
+# if 7 in mapa:  # O(1)
+
+
+mapa2 = {}
 
 # inicializando a key
 
-mapa["Canada"] = []
+mapa2["Canada"] = []
 cidades = ["Vancouver", "Toronto"]
-mapa["Canada"] += cidades
+mapa2["Canada"] += cidades
 
-// com dictdefault (vem com chaves predefinidas)
+# com dictdefault (vem com chaves predefinidas)
 
 from collections import defaultdict
-mapa_cidades = defaultdict(list)
+mapa2_cidades = defaultdict(list)
 
 cidades = ["Vancouver", "Toronto"]
-mapa_cidades["Canada"] += cidades
+mapa2_cidades["Canada"] += cidades
 
