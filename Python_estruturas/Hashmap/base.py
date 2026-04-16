@@ -50,3 +50,50 @@ mapa2_cidades = defaultdict(list)
 cidades = ["Vancouver", "Toronto"]
 mapa2_cidades["Canada"] += cidades
 
+# 🧠 Diferença simples (guarda isso)
+# 🔹 dict (dicionário)
+# mapa = {"a": 1}
+
+# 👉 tem:
+
+# chave
+# valor
+# 🔹 set
+# conjunto = {1, 2, 3}
+
+# 👉 tem:
+
+# só valores (únicos)
+# NÃO tem chave → valor
+# 💡 Então por que usei set?
+
+# Porque o problema era:
+
+# “existe algum elemento em comum?”
+
+# 👉 Você NÃO precisa:
+
+# contar ❌
+# guardar índice ❌
+# guardar valor extra ❌
+
+# 👉 Só precisa saber:
+
+# “isso existe?”
+
+# 🔥 Comparação direta
+# ❌ Usando dict (funciona, mas exagerado)
+# hashab = {}
+
+# for x in a:
+#     hashab[x] = True
+
+# for y in b:
+#     if y in hashab:
+#         return True
+# ✅ Usando set (mais correto)
+# set_a = set(a)
+
+# for y in b:
+#     if y in set_a:
+#         return True
