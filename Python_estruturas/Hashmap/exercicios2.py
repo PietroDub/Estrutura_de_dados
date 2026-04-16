@@ -132,6 +132,3 @@ palavras = ["eat","tea","tan","ate","nat","bat"]
 # chave = palavra ordenada
 
 hashword = {}
-
-for w in palavras:
-    hashword[] += w
