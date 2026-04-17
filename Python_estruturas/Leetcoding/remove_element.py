@@ -10,6 +10,17 @@ def removeElement(nums: list[int], val: int) -> int:
             nums.pop(x)
     return valor
 
+# segunda 
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        for n in nums:
+            for j in nums:
+                if j == val:
+                    nums.remove(j)
+
+        return(len(nums))    
+    
+
 # correção ! O(n)
 def removeElement(self, nums: List[int], val: int) -> int:
     i = 0
